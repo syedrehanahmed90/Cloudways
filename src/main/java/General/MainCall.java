@@ -1,19 +1,8 @@
 package General;
 
 import Objects.*;
-import PreReq.TestBase;
 import com.relevantcodes.extentreports.ExtentReports;
-import dbConnection.dbConn;
-import io.restassured.RestAssured;
-import io.restassured.filter.log.LogDetail;
-
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.sql.SQLException;
-
-import static Config.configProperties.BaseURI;
 import static Config.configProperties.Environment;
 
 public class MainCall {
@@ -47,15 +36,6 @@ public class MainCall {
         } else {
             throw new IllegalStateException("Extent Report object not initialized");
         }
-    }
-
-    public static void setupPreReqs() throws SQLException {
-        //Rest Assured config
-        RestAssured.baseURI = BaseURI;
-        RestAssured.enableLoggingOfRequestAndResponseIfValidationFails(LogDetail.ALL);
-        RestAssured.useRelaxedHTTPSValidation();
-
-        TestBase.setup();
     }
 
 
