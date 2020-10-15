@@ -42,24 +42,19 @@ public class TeamPage {
     public void addNewTeamMember() {
         logStep("Click on Add Team Member Button");
         WebDriverFactory.getDriver().findElement(byAddTeamMember).click();
-        // WebDriverFactory.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
     }
 
     public void enterTeamMemberDetails(String userEmail, String name) {
         WebDriverFactory.getDriver().findElement(byEnterTeamMemberEmail).sendKeys(userEmail);
-        //WebElement isActive = WebDriverFactory.getDriver().findElements(By.xpath("//*[contains(@id,'select_value_label')][@class='md-select-value']")).get(0);
-        //Select isActive = new Select(WebDriverFactory.getDriver().findElements(By.xpath("//*[contains(@id,'select_value_label')][@class='md-select-value']")).get(0));
-        //isActive.selectByVisibleText("Active");
+        /*Select isActive = new Select(WebDriverFactory.getDriver().findElements(By.xpath("//*[contains(@id,'select_value_label')][@class='md-select-value']")).get(0));
+        isActive.selectByVisibleText("Active");*/
         WebDriverFactory.getDriver().findElement(byName).sendKeys(name);
-        // WebElement selectJobTitle = WebDriverFactory.getDriver().findElements(By.xpath("//*[contains(@id,'select_value_label')][@class='md-select-value']")).get(1);
         Select selectJobTitle = new Select(WebDriverFactory.getDriver().findElement(By.className("md-visually-hidden")));
-        ;
         selectJobTitle.selectByVisibleText("Architect");
-
         WebDriverFactory.getDriver().findElement(byBillingAccess).click();
         WebDriverFactory.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         WebDriverFactory.getDriver().findElement(byConsoleAccess).click();
-
         WebDriverFactory.getDriver().findElement(byLimitedAccess).click();
         WebDriverFactory.getDriver().findElement(byAddServer).click();
         WebDriverFactory.getDriver().findElement(byAddMemberButton).click();

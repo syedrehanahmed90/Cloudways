@@ -134,7 +134,6 @@
     <orderEntry type="library" name="Maven: io.github.cdimascio:java-dotenv:3.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.2.10" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains:annotations:13.0" level="project" />
-    <orderEntry type="library" name="Maven: com.venturedive:testrail-integration:5.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: net.rcarz:jira-client:0.5" level="project" />
     <orderEntry type="library" name="Maven: net.sf.json-lib:json-lib:jdk15:2.4" level="project" />
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.8.0" level="project" />

@@ -19,9 +19,7 @@ public class platFormLoginTest extends baseTest {
         WebDriverFactory.getDriver().manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         MainCall.PLATFORM_LOGIN_PAGE.enterCredentials(envGlobals.email, envGlobals.password);
         WebDriverFactory.getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        //MainCall.PLATFORM_LOGIN_PAGE.validateLogin();
         String str = WebDriverFactory.getDriver().findElement(By.xpath("//h1/span")).getText();
-        WebDriverFactory.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         Assert.assertEquals(str,"SERVERS");
     }
 }
