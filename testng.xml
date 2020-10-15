@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Phase1 Suite">
+
+    <test name="Add Team Member">
+        <classes>
+            <class name="Testcases.platFormLoginTest">
+                    <methods>
+                        <include name="loginPlatform"></include>
+
+                    </methods>
+            </class>
+            <class name="Testcases.teamPageTest">
+                <methods>
+                    <include name="navigateTeamPage"></include>
+                    <include name="enterDetailsOnTeamPage"></include>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
